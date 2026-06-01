@@ -1,16 +1,21 @@
-document.getElementById("umowBtn").addEventListener("click", function(){
-    document.getElementById("rezerwacja").scrollIntoView({
-        behavior: "smooth"
-    });
+const umowBtn = document.getElementById("umowBtn");
+const formularz = document.getElementById("formularz");
+const komunikat = document.getElementById("komunikat");
+
+umowBtn.addEventListener("click", () => {
+  document.getElementById("rezerwacja").scrollIntoView({
+    behavior: "smooth"
+  });
 });
 
-document.getElementById("formularz").addEventListener("submit", function(e){
-    e.preventDefault();
+formularz.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    const imie = document.getElementById("imie").value;
-    const data = document.getElementById("data").value;
-    const godzina = document.getElementById("godzina").value;
+  const imie = document.getElementById("imie").value;
+  const data = document.getElementById("data").value;
+  const godzina = document.getElementById("godzina").value;
 
-    document.getElementById("komunikat").innerHTML =
-        `Dziękujemy ${imie}! Twoja wizyta została wybrana na ${data} o ${godzina}.`;
+  komunikat.style.display = "block";
+  komunikat.textContent =
+    `Dziękujemy, ${imie}! Wybrany termin: ${data}, godzina ${godzina}.`;
 });
