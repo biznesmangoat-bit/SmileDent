@@ -1,101 +1,137 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmileDent</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmileDent</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-    <div class="logo">SmileDent</div>
-    <ul>
-        <li><a href="#o-nas">O nas</a></li>
-        <li><a href="#uslugi">Usługi</a></li>
-        <li><a href="#cennik">Cennik</a></li>
-        <li><a href="#rezerwacja">Rezerwacja</a></li>
-    </ul>
+  <div class="logo">Smile<span>Dent</span></div>
+  <ul>
+    <li><a href="#uslugi">Usługi</a></li>
+    <li><a href="#cennik">Cennik</a></li>
+    <li><a href="#opinie">Opinie</a></li>
+    <li><a href="#rezerwacja" class="nav-btn">Rezerwacja</a></li>
+  </ul>
 </nav>
 
-<header>
-    <h1>Gabinet Dentystyczny SmileDent</h1>
-    <p>Profesjonalna opieka stomatologiczna dla całej rodziny</p>
-    <button id="umowBtn">Umów wizytę</button>
+<header class="hero">
+  <div class="hero-text">
+    <p class="badge">Nowoczesny gabinet stomatologiczny</p>
+    <h1>Zdrowy uśmiech zaczyna się tutaj</h1>
+    <p class="opis">
+      Profesjonalna opieka, szybka rezerwacja i komfortowe leczenie dla całej rodziny.
+    </p>
+
+    <div class="hero-buttons">
+      <button id="umowBtn">Umów wizytę</button>
+      <a href="#cennik">Zobacz cennik</a>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <h3>Najbliższy wolny termin</h3>
+    <p>Dzisiaj</p>
+    <strong>17:30</strong>
+    <span>Przegląd stomatologiczny</span>
+  </div>
 </header>
 
-<section id="o-nas">
-    <h2>O nas</h2>
-    <p>
-        SmileDent to nowoczesny gabinet stomatologiczny, w którym dbamy o zdrowy
-        i piękny uśmiech naszych pacjentów.
-    </p>
-</section>
-
 <section id="uslugi">
+  <div class="section-title">
+    <p>Co oferujemy?</p>
     <h2>Nasze usługi</h2>
+  </div>
 
-    <div class="karty">
-        <div class="karta">
-            <h3>🦷 Przeglądy</h3>
-            <p>Regularna kontrola zębów i szybkie wykrywanie problemów.</p>
-        </div>
-
-        <div class="karta">
-            <h3>🪥 Higienizacja</h3>
-            <p>Usuwanie kamienia, piaskowanie i profesjonalne czyszczenie.</p>
-        </div>
-
-        <div class="karta">
-            <h3>✨ Wybielanie</h3>
-            <p>Bezpieczne wybielanie zębów i poprawa estetyki uśmiechu.</p>
-        </div>
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🦷</div>
+      <h3>Przeglądy</h3>
+      <p>Regularna kontrola zdrowia zębów i szybkie wykrywanie problemów.</p>
     </div>
+
+    <div class="card">
+      <div class="icon">🪥</div>
+      <h3>Higienizacja</h3>
+      <p>Skaling, piaskowanie i profesjonalne czyszczenie jamy ustnej.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">✨</div>
+      <h3>Wybielanie</h3>
+      <p>Bezpieczne wybielanie zębów i poprawa estetyki uśmiechu.</p>
+    </div>
+  </div>
 </section>
 
 <section id="cennik">
+  <div class="section-title">
+    <p>Przejrzyste ceny</p>
     <h2>Cennik</h2>
+  </div>
 
-    <div class="usluga">
-        <span>Przegląd stomatologiczny</span>
-        <strong>150 zł</strong>
+  <div class="price-list">
+    <div class="price-row">
+      <span>Przegląd stomatologiczny</span>
+      <strong>150 zł</strong>
+    </div>
+    <div class="price-row">
+      <span>Higienizacja</span>
+      <strong>250 zł</strong>
+    </div>
+    <div class="price-row">
+      <span>Wybielanie zębów</span>
+      <strong>700 zł</strong>
+    </div>
+    <div class="price-row">
+      <span>Leczenie kanałowe</span>
+      <strong>od 600 zł</strong>
+    </div>
+  </div>
+</section>
+
+<section id="opinie">
+  <div class="section-title">
+    <p>Zaufali nam pacjenci</p>
+    <h2>Opinie</h2>
+  </div>
+
+  <div class="reviews">
+    <div class="review">
+      <p>“Bardzo profesjonalna obsługa i piękny gabinet. Polecam!”</p>
+      <strong>— Anna K.</strong>
     </div>
 
-    <div class="usluga">
-        <span>Higienizacja</span>
-        <strong>250 zł</strong>
+    <div class="review">
+      <p>“Szybka rezerwacja i zero stresu podczas wizyty.”</p>
+      <strong>— Michał P.</strong>
     </div>
-
-    <div class="usluga">
-        <span>Wybielanie zębów</span>
-        <strong>700 zł</strong>
-    </div>
-
-    <div class="usluga">
-        <span>Leczenie kanałowe</span>
-        <strong>od 600 zł</strong>
-    </div>
+  </div>
 </section>
 
 <section id="rezerwacja">
-    <h2>Umów wizytę</h2>
+  <div class="section-title">
+    <p>Wybierz dogodny termin</p>
+    <h2>Rezerwacja wizyty</h2>
+  </div>
 
-    <form id="formularz">
-        <input type="text" id="imie" placeholder="Imię i nazwisko" required>
-        <input type="date" id="data" required>
-        <input type="time" id="godzina" required>
+  <form id="formularz">
+    <input type="text" id="imie" placeholder="Imię i nazwisko" required>
+    <input type="date" id="data" required>
+    <input type="time" id="godzina" required>
+    <button type="submit">Zarezerwuj termin</button>
+  </form>
 
-        <button type="submit">Zarezerwuj</button>
-    </form>
-
-    <div id="komunikat"></div>
+  <div id="komunikat"></div>
 </section>
 
 <footer>
-    <h3>SmileDent</h3>
-    <p>ul. Uśmiechowa 12, Kraków</p>
-    <p>Telefon: 123 456 789</p>
-    <p>Email: kontakt@smiledent.pl</p>
+  <h3>SmileDent</h3>
+  <p>ul. Uśmiechowa 12, Kraków</p>
+  <p>123 456 789 · kontakt@smiledent.pl</p>
 </footer>
 
 <script src="script.js"></script>
