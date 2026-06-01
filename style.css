@@ -23,27 +23,27 @@ nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(255,255,255,.8);
+  background:rgba(255,255,255,.85);
   backdrop-filter:blur(20px);
   border-bottom:1px solid #e5e5e5;
 }
 
 .logo{
   font-size:1.4rem;
-  font-weight:800;
+  font-weight:900;
 }
 
 nav ul{
   display:flex;
-  align-items:center;
   gap:24px;
   list-style:none;
+  align-items:center;
 }
 
 nav a{
   color:#222;
   text-decoration:none;
-  font-weight:600;
+  font-weight:700;
 }
 
 .nav-btn,
@@ -53,7 +53,7 @@ nav a{
   color:white;
   padding:13px 22px;
   border-radius:999px;
-  font-weight:700;
+  font-weight:800;
   cursor:pointer;
   transition:.25s;
 }
@@ -67,82 +67,66 @@ nav a{
 .hero{
   min-height:85vh;
   padding:110px 8%;
-  text-align:center;
   display:flex;
   flex-direction:column;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
+  text-align:center;
 }
 
 .badge,
 .mini-title{
   color:#0071e3;
-  font-weight:800;
+  font-weight:900;
   margin-bottom:14px;
 }
 
 .hero h1{
   max-width:900px;
-  font-size:clamp(3rem,7vw,6.5rem);
+  font-size:clamp(3rem,7vw,6rem);
   letter-spacing:-4px;
   line-height:.95;
-  margin-bottom:28px;
+  margin-bottom:25px;
 }
 
-.hero-text{
+.hero p{
   max-width:650px;
-  font-size:1.3rem;
   color:#555;
+  font-size:1.25rem;
   line-height:1.6;
-}
-
-.hero-buttons{
-  margin-top:35px;
-  display:flex;
-  gap:20px;
-  align-items:center;
-}
-
-.hero-buttons a{
-  color:#111;
-  text-decoration:none;
-  font-weight:800;
+  margin-bottom:30px;
 }
 
 section{
   width:min(1100px,90%);
   margin:60px auto;
   background:white;
-  padding:55px;
+  padding:50px;
   border-radius:34px;
   box-shadow:0 20px 70px rgba(0,0,0,.07);
 }
 
 section h2,
 .modal-box h2{
-  font-size:2.7rem;
-  letter-spacing:-1px;
+  font-size:2.5rem;
   margin-bottom:30px;
 }
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:22px;
 }
 
-.card,
-.opinia{
+.card{
   background:#f5f5f7;
   padding:30px;
   border-radius:26px;
   transition:.25s;
 }
 
-.card:hover,
-.opinia:hover{
+.card:hover{
   transform:translateY(-8px);
-  box-shadow:0 18px 35px rgba(0,0,0,.08);
 }
 
 .card span{
@@ -150,14 +134,11 @@ section h2,
 }
 
 .card h3{
-  margin:20px 0 10px;
-  font-size:1.4rem;
+  margin:18px 0 10px;
 }
 
-.card p,
-.opinia p{
+.card p{
   color:#555;
-  line-height:1.6;
 }
 
 .price{
@@ -165,24 +146,18 @@ section h2,
   gap:14px;
 }
 
-.price div{
+.price div,
+.wizyta{
   display:flex;
   justify-content:space-between;
   align-items:center;
   background:#f5f5f7;
-  padding:23px;
+  padding:22px;
   border-radius:22px;
-  font-size:1.05rem;
 }
 
 .price strong{
   color:#0071e3;
-  font-size:1.2rem;
-}
-
-.opinia strong{
-  display:block;
-  margin-top:18px;
 }
 
 .modal{
@@ -202,7 +177,9 @@ section h2,
 
 .modal-box{
   width:100%;
-  max-width:520px;
+  max-width:540px;
+  max-height:90vh;
+  overflow:auto;
   background:white;
   padding:40px;
   border-radius:32px;
@@ -228,18 +205,52 @@ form{
   gap:14px;
 }
 
-input{
+input,
+select{
   width:100%;
   padding:17px;
   border-radius:18px;
   border:1px solid #ddd;
   font-size:1rem;
   outline:none;
+  background:white;
 }
 
-input:focus{
+input:focus,
+select:focus{
   border-color:#0071e3;
   box-shadow:0 0 0 4px rgba(0,113,227,.15);
+}
+
+.godziny{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+.godzina{
+  padding:13px;
+  border:none;
+  border-radius:15px;
+  background:#f1f1f1;
+  cursor:pointer;
+  font-weight:800;
+}
+
+.godzina:hover{
+  background:#dbeafe;
+}
+
+.godzina.aktywna{
+  background:#0071e3;
+  color:white;
+}
+
+.godzina.zajeta{
+  background:#ddd;
+  color:#888;
+  cursor:not-allowed;
+  text-decoration:line-through;
 }
 
 #komunikat{
@@ -249,6 +260,21 @@ input:focus{
   background:#eaf4ff;
   color:#0071e3;
   border-radius:18px;
+  font-weight:800;
+}
+
+#listaWizyt{
+  display:grid;
+  gap:12px;
+}
+
+.usun{
+  border:none;
+  background:#ff3b30;
+  color:white;
+  padding:10px 14px;
+  border-radius:12px;
+  cursor:pointer;
   font-weight:800;
 }
 
@@ -274,30 +300,18 @@ footer h3{
   nav ul{
     flex-wrap:wrap;
     justify-content:center;
-    gap:14px;
-  }
-
-  .hero{
-    padding:80px 6%;
-  }
-
-  .hero h1{
-    letter-spacing:-2px;
-  }
-
-  .hero-buttons{
-    flex-direction:column;
   }
 
   section{
     padding:30px;
   }
 
-  section h2{
-    font-size:2rem;
+  .godziny{
+    grid-template-columns:repeat(2,1fr);
   }
 
-  .price div{
+  .price div,
+  .wizyta{
     flex-direction:column;
     align-items:flex-start;
     gap:8px;
