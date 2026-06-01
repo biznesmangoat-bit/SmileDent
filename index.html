@@ -3,75 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabinet Dentystyczny</title>
-
+    <title>SmileDent</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> 
+<body>
+
 <nav>
     <div class="logo">SmileDent</div>
-
     <ul>
         <li><a href="#o-nas">O nas</a></li>
+        <li><a href="#uslugi">Usługi</a></li>
         <li><a href="#cennik">Cennik</a></li>
         <li><a href="#rezerwacja">Rezerwacja</a></li>
     </ul>
 </nav>
-<nav>
-    <div class="logo">SmileDent</div>
 
-    <ul>
-        <li><a href="#o-nas">O nas</a></li>
-        <li><a href="#cennik">Cennik</a></li>
-        <li><a href="#rezerwacja">Rezerwacja</a></li>
-    </ul>
-</nav>
-    <header>
-        <h1>Gabinet Dentystyczny</h1>
-        <p>Zdrowy uśmiech każdego dnia</p>
+<header>
+    <h1>Gabinet Dentystyczny SmileDent</h1>
+    <p>Profesjonalna opieka stomatologiczna dla całej rodziny</p>
+    <button id="umowBtn">Umów wizytę</button>
+</header>
 
-        <button id="umowBtn">
-            Umów wizytę
-        </button>
-    </header>
+<section id="o-nas">
+    <h2>O nas</h2>
+    <p>
+        SmileDent to nowoczesny gabinet stomatologiczny, w którym dbamy o zdrowy
+        i piękny uśmiech naszych pacjentów.
+    </p>
+</section>
 
-    <section id="o-nas">
-        <h2>O nas</h2>
-        <p>
-            Profesjonalna opieka stomatologiczna dla dzieci i dorosłych.
-        </p>
-    </section>
+<section id="uslugi">
+    <h2>Nasze usługi</h2>
 
-    <section id="cennik">
-        <h2>Cennik</h2>
-
-        <div class="usluga">
-            <span>Przegląd stomatologiczny</span>
-            <strong>150 zł</strong>
+    <div class="karty">
+        <div class="karta">
+            <h3>🦷 Przeglądy</h3>
+            <p>Regularna kontrola zębów i szybkie wykrywanie problemów.</p>
         </div>
 
-        <div class="usluga">
-            <span>Usunięcie kamienia</span>
-            <strong>250 zł</strong>
+        <div class="karta">
+            <h3>🪥 Higienizacja</h3>
+            <p>Usuwanie kamienia, piaskowanie i profesjonalne czyszczenie.</p>
         </div>
 
-        <div class="usluga">
-            <span>Leczenie kanałowe</span>
-            <strong>600 zł</strong>
+        <div class="karta">
+            <h3>✨ Wybielanie</h3>
+            <p>Bezpieczne wybielanie zębów i poprawa estetyki uśmiechu.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="rezerwacja">
-        <h2>Umów wizytę</h2>
+<section id="cennik">
+    <h2>Cennik</h2>
 
-        <input type="text" placeholder="Imię i nazwisko">
-        <input type="date">
-        <input type="time">
+    <div class="usluga">
+        <span>Przegląd stomatologiczny</span>
+        <strong>150 zł</strong>
+    </div>
 
-        <button>Zarezerwuj</button>
-    </section>
+    <div class="usluga">
+        <span>Higienizacja</span>
+        <strong>250 zł</strong>
+    </div>
 
-    <script src="script.js"></script>
+    <div class="usluga">
+        <span>Wybielanie zębów</span>
+        <strong>700 zł</strong>
+    </div>
 
+    <div class="usluga">
+        <span>Leczenie kanałowe</span>
+        <strong>od 600 zł</strong>
+    </div>
+</section>
+
+<section id="rezerwacja">
+    <h2>Umów wizytę</h2>
+
+    <form id="formularz">
+        <input type="text" id="imie" placeholder="Imię i nazwisko" required>
+        <input type="date" id="data" required>
+        <input type="time" id="godzina" required>
+
+        <button type="submit">Zarezerwuj</button>
+    </form>
+
+    <div id="komunikat"></div>
+</section>
+
+<footer>
+    <h3>SmileDent</h3>
+    <p>ul. Uśmiechowa 12, Kraków</p>
+    <p>Telefon: 123 456 789</p>
+    <p>Email: kontakt@smiledent.pl</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
