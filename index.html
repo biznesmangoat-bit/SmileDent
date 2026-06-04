@@ -3,13 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SmileDent</title>
+  <title>SmileDent — Nowoczesna Stomatologia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="logo">🦷 SmileDent</div>
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileClose">×</button>
+  <a href="#home" class="mobile-link">Strona główna</a>
+  <a href="#uslugi" class="mobile-link">Usługi</a>
+  <a href="#zespol" class="mobile-link">Zespół</a>
+  <a href="#cennik" class="mobile-link">Cennik</a>
+  <a href="#kontakt" class="mobile-link">Kontakt</a>
+</div>
+
+<!-- Nav -->
+<nav id="navbar">
+  <div class="logo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2C8 2 5 5 5 9c0 2.5 1 4.5 2.5 6L9 22h6l1.5-7C18 13.5 19 11.5 19 9c0-4-3-7-7-7z"/>
+    </svg>
+    SmileDent
+  </div>
 
   <ul>
     <li><a href="#home">Strona główna</a></li>
@@ -19,156 +38,248 @@
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
 
-  <button class="nav-btn open-modal">Umów wizytę</button>
+  <button class="nav-cta open-modal">Umów wizytę</button>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
 
-<header id="home" class="hero">
-  <div class="hero-text">
-    <p class="tag">NOWOCZESNA STOMATOLOGIA</p>
-    <h1>Zdrowy uśmiech.<br><span>Bez stresu.</span></h1>
-    <p>Profesjonalna opieka, nowoczesne metody leczenia i komfort na każdym etapie wizyty.</p>
-
-    <div class="hero-buttons">
-      <button class="main-btn open-modal">Umów wizytę online</button>
-      <a href="#uslugi" class="second-btn">Zobacz usługi</a>
+<!-- Hero -->
+<header id="home">
+  <div class="hero-left">
+    <span class="hero-tag">Nowoczesna stomatologia</span>
+    <h1 class="hero-h1">Zdrowy uśmiech.<br><em>Bez stresu.</em></h1>
+    <p class="hero-sub">Profesjonalna opieka, nowoczesne metody leczenia i komfort na każdym etapie wizyty.</p>
+    <div class="hero-actions">
+      <button class="btn-primary open-modal">Umów wizytę online</button>
+      <a href="#uslugi" class="btn-ghost">Zobacz usługi</a>
     </div>
   </div>
 
-  <div class="hero-image">
-    <img src="images (1).jpg" alt="Gabinet dentystyczny">
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=900&auto=format&fit=crop" alt="Gabinet dentystyczny">
+    <div class="hero-right-overlay"></div>
+    <div class="hero-badge">
+      <strong>12</strong>
+      <span>lat doświadczenia</span>
+    </div>
   </div>
 </header>
 
-<section class="stats">
-  <div>
+<!-- Stats -->
+<div class="stats">
+  <div class="stat-item">
     <h3>1500+</h3>
     <p>Zadowolonych pacjentów</p>
   </div>
-
-  <div>
+  <div class="stat-item">
     <h3>98%</h3>
     <p>Pozytywnych opinii</p>
   </div>
-
-  <div>
+  <div class="stat-item">
     <h3>12 lat</h3>
     <p>Doświadczenia</p>
   </div>
-</section>
-
-<section id="uslugi" class="section">
-  <p class="mini">OFERTA</p>
-  <h2>Nasze usługi</h2>
-
-  <div class="cards">
-    <div class="card">
-      <span>🦷</span>
-      <h3>Przeglądy</h3>
-      <p>Regularne kontrole i diagnostyka pozwalają zapobiegać problemom.</p>
-    </div>
-
-    <div class="card">
-      <span>🪥</span>
-      <h3>Higienizacja</h3>
-      <p>Skaling, piaskowanie i polerowanie dla zdrowych zębów.</p>
-    </div>
-
-    <div class="card">
-      <span>✨</span>
-      <h3>Wybielanie</h3>
-      <p>Bezpieczne wybielanie zębów i poprawa estetyki uśmiechu.</p>
-    </div>
-
-    <div class="card">
-      <span>🛡️</span>
-      <h3>Leczenie</h3>
-      <p>Leczenie zachowawcze, kanałowe i wiele więcej.</p>
-    </div>
-  </div>
-</section>
-
-<section id="zespol" class="section team-section">
-  <div class="section-left">
-    <p class="mini">ZESPÓŁ</p>
-    <h2>Nasz zespół</h2>
-    <p>Nasi specjaliści to doświadczenie, pasja i indywidualne podejście do każdego pacjenta.</p>
-    <button class="main-btn open-modal">Poznaj nas</button>
-  </div>
-
-  <div class="team">
-    <div class="doctor">
-      <img src="images (1).jpg" alt="Dentystka">
-      <h3>dr Anna Kowalska</h3>
-      <p>Stomatologia zachowawcza</p>
-    </div>
-
-    <div class="doctor">
-      <img src="images.jpg" alt="Dentystka">
-      <h3>dr Michał Nowak</h3>
-      <p>Endodoncja i leczenie kanałowe</p>
-    </div>
-
-    <div class="doctor">
-      <img src="images (1).jpg" alt="Dentystka">
-      <h3>dr Katarzyna Wiśniewska</h3>
-      <p>Stomatologia estetyczna</p>
-    </div>
-  </div>
-</section>
-
-<section id="cennik" class="section price-section">
-  <div>
-    <p class="mini">CENNIK</p>
-    <h2>Cennik</h2>
-
-    <div class="price-list">
-      <div><span>Przegląd stomatologiczny</span><strong>150 zł</strong></div>
-      <div><span>Higienizacja</span><strong>250 zł</strong></div>
-      <div><span>Wybielanie zębów</span><strong>700 zł</strong></div>
-      <div><span>Leczenie kanałowe</span><strong>od 600 zł</strong></div>
-    </div>
-  </div>
-
-  <img src="images.jpg" alt="Gabinet stomatologiczny">
-</section>
-
-<section id="kontakt" class="section contact">
-  <div>
-    <p class="mini">KONTAKT</p>
-    <h2>Odwiedź nas</h2>
-    <p>📍 ul. Uśmiechowa 12, Kraków</p>
-    <p>📞 123 456 789</p>
-    <p>✉️ kontakt@smiledent.pl</p>
-    <p>🕘 Pon - Pt: 09:00 - 17:00</p>
-  </div>
-
-  <div class="map">
-    <p>Mapa Google</p>
-  </div>
-
-  <div class="booking-card">
-    <h3>Umów wizytę</h3>
-    <p>Wybierz dogodny termin przez nasz kalendarz online.</p>
-    <button class="main-btn open-modal">Zarezerwuj termin</button>
-  </div>
-</section>
-
-<div class="modal" id="modal">
-  <div class="modal-box">
-    <button class="close" id="closeBtn">×</button>
-    <h2>Rezerwacja wizyty</h2>
-    <p>Przejdź do kalendarza Google i wybierz dostępny termin.</p>
-
-    <a href="https://calendar.app.google/HMvNPzbq7ndNqo9Z7" target="_blank" class="booking-btn">
-      Otwórz kalendarz rezerwacji
-    </a>
-  </div>
 </div>
 
+<!-- Usługi -->
+<section id="uslugi">
+  <div class="services-header fade-up">
+    <div>
+      <div class="section-label">Oferta</div>
+      <h2 class="section-h2">Nasze usługi</h2>
+    </div>
+    <p>Kompleksowa opieka stomatologiczna dostosowana do Twoich potrzeb.</p>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-icon">🦷</div>
+      <h3>Przeglądy</h3>
+      <p>Regularne kontrole i diagnostyka pozwalają zapobiegać problemom zanim się pojawią.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🪥</div>
+      <h3>Higienizacja</h3>
+      <p>Skaling, piaskowanie i polerowanie dla zdrowych i czystych zębów.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">✨</div>
+      <h3>Wybielanie</h3>
+      <p>Bezpieczne wybielanie i poprawa estetyki uśmiechu metodami bez uszkodzeń.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🛡️</div>
+      <h3>Leczenie</h3>
+      <p>Leczenie zachowawcze, kanałowe i odbudowa zębów na najwyższym poziomie.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Zespół -->
+<section id="zespol">
+  <div class="team-layout">
+    <div class="team-intro fade-up">
+      <div class="section-label">Zespół</div>
+      <h2 class="section-h2">Nasi specjaliści</h2>
+      <p>Doświadczenie, pasja i indywidualne podejście do każdego pacjenta — to nasza filozofia pracy.</p>
+      <button class="btn-primary open-modal">Umów wizytę</button>
+    </div>
+
+    <div class="doctors-grid">
+      <div class="doctor-card">
+        <img class="doctor-img" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&auto=format&fit=crop&crop=faces" alt="dr Anna Kowalska">
+        <h3>dr Anna Kowalska</h3>
+        <p>Stomatologia zachowawcza</p>
+      </div>
+      <div class="doctor-card">
+        <img class="doctor-img" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&auto=format&fit=crop&crop=faces" alt="dr Michał Nowak">
+        <h3>dr Michał Nowak</h3>
+        <p>Endodoncja i leczenie kanałowe</p>
+      </div>
+      <div class="doctor-card">
+        <img class="doctor-img" src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&auto=format&fit=crop&crop=faces" alt="dr Katarzyna Wiśniewska">
+        <h3>dr Katarzyna Wiśniewska</h3>
+        <p>Stomatologia estetyczna</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cennik -->
+<section id="cennik">
+  <div class="price-layout">
+    <div>
+      <div class="section-label">Cennik</div>
+      <h2 class="section-h2">Przejrzyste ceny</h2>
+
+      <div class="price-list">
+        <div class="price-row">
+          <span>Przegląd stomatologiczny</span>
+          <strong>150 zł</strong>
+        </div>
+        <div class="price-row">
+          <span>Higienizacja</span>
+          <strong>250 zł</strong>
+        </div>
+        <div class="price-row">
+          <span>Wybielanie zębów</span>
+          <strong>700 zł</strong>
+        </div>
+        <div class="price-row">
+          <span>Leczenie kanałowe</span>
+          <strong>od 600 zł</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-img-wrap">
+      <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop" alt="Gabinet stomatologiczny">
+    </div>
+  </div>
+</section>
+
+<!-- Kontakt -->
+<section id="kontakt">
+  <div class="fade-up">
+    <div class="section-label">Kontakt</div>
+    <h2 class="section-h2">Odwiedź nas</h2>
+  </div>
+
+  <div class="contact-grid" style="margin-top:3rem;">
+    <div>
+      <div class="contact-info">
+        <div class="contact-line">
+          <div class="contact-line-icon">📍</div>
+          <div>
+            <strong>Adres</strong>
+            <p>ul. Uśmiechowa 12, Kraków</p>
+          </div>
+        </div>
+        <div class="contact-line">
+          <div class="contact-line-icon">📞</div>
+          <div>
+            <strong>Telefon</strong>
+            <p>123 456 789</p>
+          </div>
+        </div>
+        <div class="contact-line">
+          <div class="contact-line-icon">✉️</div>
+          <div>
+            <strong>E-mail</strong>
+            <p>kontakt@smiledent.pl</p>
+          </div>
+        </div>
+        <div class="contact-line">
+          <div class="contact-line-icon">🕘</div>
+          <div>
+            <strong>Godziny otwarcia</strong>
+            <p>Pon – Pt: 09:00 – 17:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <!-- Podmień src na prawdziwy Google Maps embed -->
+      <div class="map-embed">
+        <span>Mapa Google — dodaj embed src</span>
+      </div>
+
+      <div class="booking-strip">
+        <div>
+          <h3>Umów wizytę online</h3>
+          <p>Wybierz termin bezpośrednio w kalendarzu.</p>
+        </div>
+        <button class="btn-white open-modal">Zarezerwuj termin</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer>
-  <div class="logo">🦷 SmileDent</div>
+  <div class="logo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
+      <path d="M12 2C8 2 5 5 5 9c0 2.5 1 4.5 2.5 6L9 22h6l1.5-7C18 13.5 19 11.5 19 9c0-4-3-7-7-7z"/>
+    </svg>
+    SmileDent
+  </div>
   <p>© 2026 SmileDent. Wszystkie prawa zastrzeżone.</p>
 </footer>
+
+<!-- Modal z kalendarzem -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <h2>Rezerwacja wizyty</h2>
+        <p>Wybierz dostępny termin — wszystko odbywa się tutaj, na stronie.</p>
+      </div>
+      <button class="modal-close" id="modalClose">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-loading" id="modalLoading">
+        <div class="spinner"></div>
+        <span>Ładowanie kalendarza…</span>
+      </div>
+      <!--
+        INSTRUKCJA: Zastąp src poniższego iframe swoim linkiem do
+        Google Calendar Appointment Scheduling.
+        Jak uzyskać: Calendar → Harmonogram spotkań → Opublikuj →
+        skopiuj link i zmień calendar.app.google na
+        calendar.google.com/calendar/appointments/schedules/...?gv=true
+      -->
+      <iframe
+        id="calendarFrame"
+        src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3WFLzgz3Uf5u6oGGNmw0kGJ47Pj2RqMnoC7fKNbEXam5VaYyKYrDT9gbU6MXHRbr7VMnDKY-DF?gv=true"
+        style="display:none;"
+        onload="document.getElementById('modalLoading').style.display='none'; this.style.display='block';"
+        allow="payment"
+      ></iframe>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
