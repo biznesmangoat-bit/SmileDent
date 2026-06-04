@@ -1,8 +1,15 @@
-// ── Nav scroll shadow
+// ── Nav scroll shadow (throttled)
 const navbar = document.getElementById('navbar');
+let ticking = false;
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 20);
-});
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, { passive: true });
 
 // ── Modal
 const overlay = document.getElementById('modalOverlay');
